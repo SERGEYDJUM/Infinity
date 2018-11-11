@@ -2,6 +2,7 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #ffffff;
+  font-family: Ubuntu;
 }
 
 .form-signin {
@@ -9,19 +10,20 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
+
 .form-signin .form-signin-heading,
-.form-signin .checkbox {
+.form-signin {
   margin-bottom: 10px;
 }
-.form-signin .checkbox {
+.form-signin {
   font-weight: normal;
 }
 .form-signin .form-control {
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
 }
@@ -53,4 +55,25 @@ body {
 }
 .container{
   margin-top: 7%;
+}
+
+#regbutton 
+{
+  border-radius: 21px;
+  width: 135px; 
+  height: 40px; 
+  margin-left: 53%;
+  font-size: 18px;
+  padding: .05em 0.9em; 
+  margin-top: -13%
+}
+#logbutton 
+{
+  border-radius: 21px; 
+  width: 135px; 
+  height: 40px; 
+  margin-left: 0%;
+  font-size: 18px;
+  padding: .05em 1.5em; 
+  margin-top: 5%
 }
