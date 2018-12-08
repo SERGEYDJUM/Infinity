@@ -5,3 +5,6 @@ def index(reqest):
 
 def signin(reqest):
     return render(reqest,'signin.html')
+
+def login(reqest):
+    return render(reqest,'login.html')
