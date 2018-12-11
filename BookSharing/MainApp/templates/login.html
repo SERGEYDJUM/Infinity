@@ -2,12 +2,62 @@
   <html>
     <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       {% load static %}
       <link rel="stylesheet" href="{% static 'css/login.css' %}">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
     <body>
+
+    <header>
+  		{% include 'includes/header.html' %}
+  	</header>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="card col s6 offset-s3">
+
+          <div class="row">
+            <h2 class="center-align">Вход</h2>
+          </div>
+
+          <div class="row">
+            <form>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="login" type="text">
+                <label for="login">Логин</label>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix">lock</i>
+                <input id="password" type="password">
+                <label for="password">Пароль</label>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class=" row col s6">
+              <a class="waves-effect waves-light btn col s8 offset-s2">Войти</a>
+            </div>
+
+            <div class="row col s6">
+              <a href="/signin" class="waves-effect waves-light btn col s8 offset-s2">Регистрация</a>
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
   </html>
