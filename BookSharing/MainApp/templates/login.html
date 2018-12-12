@@ -12,36 +12,42 @@
     <div class="container">
       <div class="row">
         <div id="card" class="card col s11 offset-s3">
+
           <div class="row">
             <h2 class="center-align">Вход</h2>
           </div>
+
           <div class="row">
             <form>
+
               <div class="input-field col s10 offset-s1">
                 <i class="material-icons prefix green-text">account_circle</i>
-                <input id="login" type="text">
+                <input id="login" type="text" autocomplete="username">
                 <label for="login" class="grey-text">Логин</label>
               </div>
+
               <div class="input-field col s10 offset-s1">
                 <i style="" class="material-icons prefix green-text">lock</i>
-                <input id="password" type="password">
+                <input id="password" type="password" autocomplete="current-password">
                 <label for="password" class="grey-text">Пароль</label>
               </div>
+
               <div class="row">
-            <div class=" row col s6">
-              <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Войти</button>
-            </div>
-            <div class="row col s6">
-              <a href="/signin" class="green waves-effect waves-light btn col s8 offset-s2">Вступить</a>
-            </div>
-            
-          </div>
+                <div class=" row col s6">
+                  <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Войти</button>
+                </div>
+
+                <div class="row col s6">
+                  <a href="/signin" class="green waves-effect waves-light btn col s8 offset-s2">Вступить</a>
+                </div>
+              </div>
+
             </form>
           </div>
           </div>
         </div>
       </div>
     </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </body>
-  </html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
