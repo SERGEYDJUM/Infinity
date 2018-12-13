@@ -5,6 +5,7 @@ html
   font-family: Roboto;
 }
 
+
 .btn
 {
   border-radius: 20px;
@@ -12,18 +13,17 @@ html
 
 #card
 {
-  margin-top: 15%;
-  margin-left: 5%;
+  margin-top: 25vh;
   border-radius: 20px;
 }
 
-input:focus 
+input:focus
 {
   border-bottom: 1px solid #4caf50 !important;
   box-shadow: 0 1px 0 0 #4caf50 !important;
 }
-
-h2 
-{
-    font-size: 40px;
-}
+/* Не нравиться <h2> ?!
+Но нет!
+Перепишу ка я font-size!
+Мне ж тяжело использовать готовый <h3>!
+Сергей Дж.  */
