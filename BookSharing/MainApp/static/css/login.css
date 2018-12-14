@@ -14,11 +14,11 @@ html
 #card
 {
   margin-top: 25vh;
-  border-radius: 20px;
+  border-radius: 10%;
 }
 
-/* Не нравиться <h2> ?!
-Но нет!
-Перепишу ка я font-size!
-Мне ж тяжело использовать готовый <h3>!
-Сергей Дж.  */
+input:focus
+{
+  border-bottom: 1px solid #4caf50 !important;
+  box-shadow: 0 1px 0 0 #4caf50 !important;
+}
