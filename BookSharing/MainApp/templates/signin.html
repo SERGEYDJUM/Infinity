@@ -9,48 +9,58 @@
 		  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
     <body>
+    <div class="container">
+      <div class="row">
+        <div id="card" class="card col s10 offset-s1 m8 offset-m2 l6 offset-l3 xl6 offset-xl3">
+        
+          <!-- Регистрация -->
+          <div class="row">
+            <h3 class="center-align">Регистрация</h3>
+          </div>
 
+          <div class="row">
+            <form>
 
+              <!-- Логин -->
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix green-text">account_circle</i>
+                <input required id="login" type="text" autocomplete="username">
+                <label for="login" class="grey-text">Логин</label>
+              </div>
 
-      <header>
-    		{% include 'includes/header.html' %}
-    	</header>
+              <!-- Почта -->
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix green-text">email</i>
+                <input required id="email" type="email" autocomplete="email" class="validate">
+                <label for="email" class="grey-text">Почта</label>
+              </div>
 
+              <!-- Пароль -->
+              <div class="input-field col s10 offset-s1">
+                <i style="" class="material-icons prefix green-text">lock</i>
+                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required id="password" type="password" autocomplete="new-password" class="validate">
+                <label for="password" class="grey-text">Пароль</label>
+              </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="card col s6 offset-s3">
+              <!-- Повтор пароля -->
+              <div class="input-field col s10 offset-s1">
+                <i style="" class="material-icons prefix green-text">repeat</i>
+                <input required id="passwordag" type="password" autocomplete="new-password" class="validate">
+                <label for="passwordag" class="grey-text">Повторите пароль</label>
+              </div>
 
-            <div class="row">
-              <h2 class="center-align">Регистрация</h2>
-            </div>
-
-            <div class="row">
-              <form>
-                <div class="input-field col s10 offset-s1">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="login" type="text">
-                  <label for="login">Логин</label>
+              <!-- Зарегистрироваться -->
+              <div class="row">
+                <div class=" row col1 s6">
+                  <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Зарегистрироваться</button>
                 </div>
-                <div class="input-field col s10 offset-s1">
-                  <i class="material-icons prefix">lock</i>
-                  <input id="password" type="password">
-                  <label for="password">Пароль</label>
-                </div>
-              </form>
-            </div>
+              </div>
 
-            <div class="row">
-                <a class="waves-effect waves-light btn col s6 offset-s3">Регистрация</a>
-            </div>
-
-            </div>
+            </form>
           </div>
         </div>
       </div>
-
-
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </body>
-  </html>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
