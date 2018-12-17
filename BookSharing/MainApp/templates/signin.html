@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div id="card" class="card col s10 offset-s1 m8 offset-m2 l6 offset-l3 xl6 offset-xl3">
-        
+
           <!-- Регистрация -->
           <div class="row">
             <h3 class="center-align">Регистрация</h3>
@@ -24,8 +24,9 @@
               <!-- Логин -->
               <div class="input-field col s10 offset-s1">
                 <i class="material-icons prefix green-text">account_circle</i>
-                <input required id="login" type="text" autocomplete="username">
+                <input required pattern="[A-Za-z0-9_]{3,16}" id="login" type="text" autocomplete="username" class="validate">
                 <label for="login" class="grey-text">Логин</label>
+                <div class="helper-text" data-error="Латинские буквы, цифры, нижнее подчёркивание. Длина: 3-16."></div>
               </div>
 
               <!-- Почта -->
@@ -33,20 +34,15 @@
                 <i class="material-icons prefix green-text">email</i>
                 <input required id="email" type="email" autocomplete="email" class="validate">
                 <label for="email" class="grey-text">Почта</label>
+                <div class="helper-text" data-error="Неправильный адрес электронной почты."></div>
               </div>
 
               <!-- Пароль -->
               <div class="input-field col s10 offset-s1">
                 <i style="" class="material-icons prefix green-text">lock</i>
-                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" required id="password" type="password" autocomplete="new-password" class="validate">
+                <input required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" id="password" type="password" autocomplete="new-password" class="validate">
                 <label for="password" class="grey-text">Пароль</label>
-              </div>
-
-              <!-- Повтор пароля -->
-              <div class="input-field col s10 offset-s1">
-                <i style="" class="material-icons prefix green-text">repeat</i>
-                <input required id="passwordag" type="password" autocomplete="new-password" class="validate">
-                <label for="passwordag" class="grey-text">Повторите пароль</label>
+                <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
               </div>
 
               <!-- Зарегистрироваться -->
@@ -61,6 +57,9 @@
         </div>
       </div>
     </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../static/js/signin.js"></script>
   </body>
 </html>
