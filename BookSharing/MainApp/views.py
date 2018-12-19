@@ -8,3 +8,12 @@ def signin(reqest):
 
 def login(reqest):
     return render(reqest,'login.html')
+
+def about(reqest):
+    return render(reqest,'about.html')
+
+def lib(reqest):
+    return render(reqest,'lib.html')
+
+def account(reqest):
+    return render(reqest,'account.html')

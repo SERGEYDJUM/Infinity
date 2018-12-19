@@ -1,24 +1,35 @@
-<nav>
-  <div class="nav-wrapper blue-grey darken-3">
+<header>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}"></link>
+<div class="navbar-fixed hide-on-small-only">
+<nav> 
+  <div class="navbar-fixed nav-wrapper blue-grey darken-3 ">
+    <ul id="nav-mobile" class="right">
+      <li>
+        <a data-target="slide-out" class="sidenav-trigger show-on-large  waves-effect"><i class="material-icons">menu</i></a>
+      </li>
+    </ul>
     <div class="container">
       <a href="#" class="brand-logo center">BookSharing</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a></li>
-      </ul>
     </div>
   </div>
 </nav>
+</div>
 
 <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="//fotooboi.biz/img/gallery/26/thumbs/thumb_m_23155.jpg">
+    <li>
+      <!-- ВсЁ в этом div нужно подвязать к jinja или серверной логике -->
+      <div class="user-view">
+        <div class="background blue-grey darken-3"></div>
+        <a href="/account"><img class="circle" src="https://images-na.ssl-images-amazon.com/images/I/61tpJvXysNL._SY355_.png"></a>
+        <span class="white-text name">Иллюминат</span>
+        <span class="white-text email">5 уровень 100xp</span> <!-- email так надо, чтоб всё работало-->
       </div>
-      <a href="#user"><img class="circle" src="//www.kholuy.ru/files/29.Bogomater_Kazanskaja_-4-.png"></a>
-      <a href="#name"><span class="white-text name">Вася Пупкин</span></a>
-      <a href="#name"><span class="white-text email">5 уровень 100xp</span></a>  <!-- email так надо, чтоб всё работало-->
+    </li>
+    <li><a class="waves-effect light" href="/">Книги</a></li>
+    <li><a class="waves-effect light" href="/lib">Моя библиотека</a></li>
+    <li><a class="waves-effect light" href="/account">Настройки аккаунта</a></li>
+    <li><a class="waves-effect light" href="/about">О нас</a></li>
+</ul>
+</header>
 
-    </div></li>
-    <li><a class="waves-effect light" href="#">Книги</a></li>
-    <li><a class="waves-effect light" href="#">Моя библиотека</a></li>
-    <li><a class="waves-effect light" href="#">Настройки аккаунта</a></li>
