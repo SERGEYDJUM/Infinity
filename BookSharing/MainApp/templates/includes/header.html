@@ -1,26 +1,24 @@
 <nav>
   <div class="nav-wrapper blue-grey darken-3">
     <div class="container">
-      <a href="#" class="brand-logo">
-        <!-- Вставить лого -->
-        <img src="сюда лого вставить" alt="" width="50" height="50">
-        BookSharing
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#" class="waves-effect">Поблизости</a></li>
-        <li><a href="#" class="waves-effect">Поиск</a></li>
-        <li><a href="/login" class="waves-effect waves-light btn green">Войти</a></li>
+      <a href="#" class="brand-logo center">BookSharing</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-
-
 <ul id="slide-out" class="sidenav">
-    <li>
-      <a href="/login" class="waves-effect waves-light btn green">Войти</a>
-    </li>
-    <li><a class="waves-effect waves-light" href="#">Книги</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <li><div class="user-view">
+      <div class="background">
+        <img src="//fotooboi.biz/img/gallery/26/thumbs/thumb_m_23155.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="//www.kholuy.ru/files/29.Bogomater_Kazanskaja_-4-.png"></a>
+      <a href="#name"><span class="white-text name">Вася Пупкин</span></a>
+      <a href="#name"><span class="white-text email">5 уровень 100xp</span></a>  <!-- email так надо, чтоб всё работало-->
+
+    </div></li>
+    <li><a class="waves-effect light" href="#">Книги</a></li>
+    <li><a class="waves-effect light" href="#">Моя библиотека</a></li>
+    <li><a class="waves-effect light" href="#">Настройки аккаунта</a></li>
