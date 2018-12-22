@@ -9,3 +9,12 @@ html
 {
   display: none;
 }
+
+div.card.horizontal{
+  height: 25vh;
+}
+
+img
+{
+  height: 25vh;
+}
