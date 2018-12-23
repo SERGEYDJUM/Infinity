@@ -22,23 +22,26 @@
           </div>
 
           <div class="row">
-            <form>
+
+          <form method="post" action="{% url 'login' %}">
+              {% csrf_token %}
               <!-- Логин -->
               <div class="input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">account_circle</i>
-                <input id="login" type="text" autocomplete="username">
+              <i class="material-icons prefix green-text">account_circle</i>
+                  <input type="text" name="username" autofocus required id="id_username">
                 <label for="login" class="grey-text">Логин</label>
               </div>
-              <!-- Пароль -->
               <div class="input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">lock</i>
-                <input id="password" type="password" autocomplete="current-password">
+                <i style="" class="material-icons prefix green-text">lock</i>
+              <input type="password" name="password" required id="id_password" placeholder="Пароль">
                 <label for="password" class="grey-text">Пароль</label>
               </div>
+              </div>
+
               <!-- Кнопки -->
               <div class="row">
                 <div class=" row col s6">
-                  <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Войти</button>
+                  <button type="submit" value="login" class="green waves-effect waves-light btn col s8 offset-s2" value="{{ next }}">Войти</button>
                 </div>
 
                 <div class="row col s6">
