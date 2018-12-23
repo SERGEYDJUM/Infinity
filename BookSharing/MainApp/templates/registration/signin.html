@@ -20,28 +20,46 @@
           </div>
 
           <div class="row">
-            <form>
+            <form method="post" action="{% url 'signin' %}">
+                {% csrf_token %}
+                {% if for.errors %}
+                <p>Error</p>
+                {% endif %}
 
               <!-- Логин -->
               <div class="input-field col s10 offset-s1">
                 <i class="material-icons prefix green-text">account_circle</i>
-                <input required pattern="[A-Za-z0-9_]{3,16}" id="login" type="text" autocomplete="username" class="validate">
+                <input type="text" name="username" maxlength="150" autofocus required id="id_username">
                 <label for="login" class="grey-text">Логин</label>
-                <div class="helper-text" data-error="Латинские буквы, цифры, нижнее подчёркивание. Длина: 3-16."></div>
               </div>
 
               <!-- Почта -->
               <div class="input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">email</i>
-                <input required id="email" type="email" autocomplete="email" class="validate">
+                <i class="material-icons prefix green-text">contact_mail</i>
+                  <input type="email" name="email" required id="id_email">
                 <label for="email" class="grey-text">Почта</label>
-                <div class="helper-text" data-error="Неправильный адрес электронной почты."></div>
               </div>
 
+              <div class="input-field col s10 offset-s1">
+              <i class="material-icons prefix green-text">contact_mail</i>
+              <input type="text" name="first_name" maxlength="100" required id="id_first_name">
+              <label for="first_name" class="grey-text">Имя</label>
+              </div>
+
+              <div class="input-field col s10 offset-s1">
+                <input type="text" name="last_name" maxlength="100" required id="id_last_name">
+                <label for="last_name" class="grey-text">Фамилия</label>
+              </div>
               <!-- Пароль -->
               <div class="input-field col s10 offset-s1">
                 <i class="material-icons prefix green-text">lock</i>
-                <input required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}" id="password" type="password" autocomplete="new-password" class="validate">
+              <input type="password" name="password1" required id="id_password1" placeholder="Пароль">
+                <label for="password" class="grey-text">Пароль</label>
+                <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i class="material-icons prefix green-text">lock</i>
+            <input type="password" name="password2" required id="id_password2">
                 <label for="password" class="grey-text">Пароль</label>
                 <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
               </div>
