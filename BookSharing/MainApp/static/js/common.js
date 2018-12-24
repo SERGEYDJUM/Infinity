@@ -1,4 +1,5 @@
-$(document).ready(function(){
-    $(".sidenav").sidenav();
-    $('.materialboxed').materialbox();
-  });
+$('.dropdown-trigger').dropdown();
+$(document).ready(function()
+{
+  $(".sidenav").sidenav();
+});

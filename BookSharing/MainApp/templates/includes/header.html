@@ -2,13 +2,23 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}"></link>
 <div class="navbar-fixed hide-on-small-only">
-<nav> 
+<nav>
   <div class="navbar-fixed nav-wrapper blue-grey darken-3 ">
     <div class="container">
       <ul class="right">
         <li><a class="waves-effect light" href="/about">О нас</a></li>
         <li><a class="waves-effect light" href="/lib">Моя библиотека</a></li>
-        <li><a class="waves-effect light" href="/accounts/login">Аккаунт</a></li>
+        <li>
+          <a class="waves-effect light" href="/accounts/login">
+            <!-- Dropdown Trigger -->
+            <a class='dropdown-trigger btn blue-grey darken-3 waves-effect waves-light z-depth-0' href='#' data-target='dropdown1'><i class="large material-icons">account_circle</i></a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="#укажите в коде ссылку" class="green-text waves-effect waves-light">Мои книги</a></li>
+              <li><a href="#укажите в коде ссылку" class="green-text waves-effect waves-light">Настройки</a></li>
+            </ul>
+          </a>
+        </li>
       </ul>
       <a href="/" class="brand-logo left">BookSharing</a>
     </div>
@@ -32,4 +42,3 @@
     <li><a class="waves-effect light" href="/about">О нас</a></li>
 </ul>
 </header>
-

@@ -9,3 +9,8 @@ html
 {
   display: none;
 }
+
+.dropdown-trigger.btn.blue-grey.darken-3.waves-effect.waves-light.z-depth-0
+{
+  width: 10vw;
+}
