@@ -10,6 +10,39 @@
 	</head>
 	<body>
 		{% include 'includes/header.html' %}
+
+		<div class="container">
+			<!-- Modal Trigger -->
+  		<a class="green waves-effect waves-light btn modal-trigger" href="#modal1">Добавить книгу</a>
+  		<!-- Modal Structure -->
+  		<div id="modal1" class="modal">
+    		<div class="modal-content">
+      		<h4>Добавьте книгу</h4>
+					<form method="post" action="{% url 'login' %}">
+          	{% csrf_token %}
+						<div class="row">
+            	<div class="input-field col s10 offset-s1">
+              	<i class="material-icons prefix green-text">book</i>
+                <input type="text" name="title" autofocus required id="id_title">
+                <label for="login" class="grey-text">Название книги</label>
+              </div>
+              <div class="input-field col s10 offset-s1">
+                <i style="" class="material-icons prefix green-text">account_circle</i>
+              	<input type="text" name="author" required id="id_author" >
+                <label for="password" class="grey-text">Автор</label>
+              </div>
+							<a href="#" class="green waves-effect waves-light btn col s3 offset-s8">Добавить</a>
+            </div>
+          </form>
+					</div>
+    		</div>
+  		</div>
+		</div>
+
+
+
+
+
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="{% static 'js/common.js' %}"></script>
