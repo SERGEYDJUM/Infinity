@@ -21,11 +21,10 @@
             <h3 class="center-align">Вход</h3>
           </div>
 
-          <div class="row">
-
           <form method="post" action="{% url 'login' %}">
               {% csrf_token %}
               <!-- Логин -->
+              <div class="row">
               <div class="input-field col s10 offset-s1">
               <i class="material-icons prefix green-text">account_circle</i>
                   <input type="text" name="username" autofocus required id="id_username">
