@@ -13,7 +13,7 @@ html
 #card
 {
   margin-top: 16vh;
-  border-radius: 8%;
+  border-radius: 20px;
 }
 
 input:focus

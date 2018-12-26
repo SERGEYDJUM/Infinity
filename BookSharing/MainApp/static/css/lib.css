@@ -9,3 +9,12 @@ html
 { 
   display: none; 
 }
+
+button[type=submit]
+{
+  border-radius: 20px;
+}
+.modal
+{
+  border-radius: 20px
+}
