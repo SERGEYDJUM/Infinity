@@ -11,9 +11,12 @@
         <li><a href="/lib" class="white-text waves-effect waves-light blue-grey darken-3">Мои книги</a></li>
         <li><a href="/account" class="white-text waves-effect waves-light blue-grey darken-3">Настройки аккаунта</a></li>
         <li><a class="white-text waves-effect waves-light blue-grey darken-3" href="/about">О нас</a></li>
+        {% if user.is_authenticated %}
+        <li><a class="white-text waves-effect waves-light blue-grey darken-3" href='/logout' >Выйти</a></li>
+        {% else %}
+		    <li><a class="white-text waves-effect waves-light blue-grey darken-3" href='/accounts/login' >Войти</a></li>
+		    {% endif %}
 
-        <!-- Тута нету бэкенда -->
-        <li><a class="white-text waves-effect waves-light blue-grey darken-3">Выйти</a></li>
       </ul>
 
       <a href="/" class="brand-logo left unselectable">BookSharing</a>
@@ -28,7 +31,7 @@
       <div class="user-view">
         <div class="background blue-grey darken-3"></div>
         <a href="/account"><img class="circle" src="https://images-na.ssl-images-amazon.com/images/I/61tpJvXysNL._SY355_.png"></a>
-        <span class="white-text name">Иллюминат</span>
+        <span class="white-text name">{{user.username}}</span>
         <span class="white-text email">5 уровень 100xp</span> <!-- email так надо, чтоб всё работало-->
       </div>
     </li>
