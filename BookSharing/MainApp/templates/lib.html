@@ -18,20 +18,31 @@
   		<div id="modal1" class="modal">
     		<div class="modal-content">
       		<h4>Добавьте книгу</h4>
-					<form method="post" action="{% url 'login' %}">
+					<form method="POST" >
           	{% csrf_token %}
+						<input type="hidden" name="csrfmiddlewaretoken" value="zqEKTF560uVA4hP9TP8hwR1cSXjDX2Z9yCTWjIFsgSDty86ddiJZt0yqfSQbQxlE">
+      <input type="hidden" name="form-TOTAL_FORMS" value="1" id="id_form-TOTAL_FORMS">
+			<input type="hidden" name="form-INITIAL_FORMS" value="0" id="id_form-INITIAL_FORMS">
+			<input type="hidden" name="form-MIN_NUM_FORMS" value="0" id="id_form-MIN_NUM_FORMS">
+			<input type="hidden" name="form-MAX_NUM_FORMS" value="1000" id="id_form-MAX_NUM_FORMS">
 						<div class="row">
             	<div class="input-field col s10 offset-s1">
               	<i class="material-icons prefix green-text">book</i>
-                <input type="text" name="title" autofocus required id="id_title">
-                <label for="login" class="grey-text">Название книги</label>
+								<label class="grey-text" for="id_form-0-book">Название</label>
+								<input type="text" name="form-0-book" maxlength="20" id="id_form-0-book">
               </div>
               <div class="input-field col s10 offset-s1">
                 <i style="" class="material-icons prefix green-text">account_circle</i>
-              	<input type="text" name="author" required id="id_author" >
-                <label for="password" class="grey-text">Автор</label>
+								<label for="id_form-0-dis">Автор</label>
+ 								<input type="text" name="form-0-dis" maxlength="120" id="id_form-0-dis">
               </div>
-							<a href="#" class="green waves-effect waves-light btn col s3 offset-s8">Добавить</a>
+							<div class="input-field col s10 offset-s1">
+                <i style="" class="material-icons prefix green-text">phone</i>
+								<label for="id_form-0-cont">Контакты</label>
+								<input type="text" name="form-0-cont" maxlength="30" id="id_form-0-cont">
+								<input type="hidden" name="form-0-id" id="id_form-0-id">
+              </div>
+							  <button class="green waves-effect waves-light btn col s8 offset-s2" type="submit" >Добавить</button>
             </div>
           </form>
 					</div>

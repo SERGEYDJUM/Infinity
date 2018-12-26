@@ -4,6 +4,9 @@ from django.contrib import messages
 from .forms import UserRegisterForm
 from django.contrib import auth
 from django.http import HttpResponseRedirect
+from django.forms import modelformset_factory
+from .models import Books
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(reqest):
@@ -24,8 +27,19 @@ def signin(reqest):
 def about(reqest):
     return render(reqest,'about.html')
 
+@csrf_exempt
 def lib(reqest):
-    return render(reqest,'lib.html')
+    BooksFormSet = modelformset_factory(Books, fields=('book','dis','cont'))
+    if reqest.method == 'POST':
+        form = BooksFormSet(reqest.POST)
+        instances = form.save()
+        return redirect('http://127.0.0.1:8000')
+    form = BooksFormSet()
+    return render(reqest,'lib.html',{'form' : form})
 
 def account(reqest):
     return render(reqest,'account.html')
+
+def logout(request):
+	auth.logout(request)
+	return HttpResponseRedirect('/')
