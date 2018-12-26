@@ -11,16 +11,15 @@
         <li><a href="/lib" class="white-text waves-effect waves-light blue-grey darken-3">Мои книги</a></li>
         <li><a href="/account" class="white-text waves-effect waves-light blue-grey darken-3">Настройки аккаунта</a></li>
         <li><a class="white-text waves-effect waves-light blue-grey darken-3" href="/about">О нас</a></li>
-<<<<<<< HEAD
+
         {% if user.is_authenticated %}
         <li><a class="white-text waves-effect waves-light blue-grey darken-3" href='/logout' >Выйти</a></li>
         {% else %}
 		    <li><a class="white-text waves-effect waves-light blue-grey darken-3" href='/accounts/login' >Войти</a></li>
-		{% endif %}
+		   {% endif %}
 
         <!-- Тута нету бэкенда -->
         <li><a class="white-text waves-effect waves-light blue-grey darken-3">Выйти</a></li>
->>>>>>> 947aad675a237d4884d5b3c00b876514b3f8c8f8
       </ul>
 
       <a href="/" class="brand-logo left unselectable">BookSharing</a>
