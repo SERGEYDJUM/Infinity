@@ -3,24 +3,18 @@
 <link rel="stylesheet" href="{% static 'css/header.css' %}"></link>
 <div class="navbar-fixed hide-on-small-only">
 <nav>
-  <div class="navbar-fixed nav-wrapper blue-grey darken-3 ">
+  <div class="navbar-fixed nav-wrapper blue-grey darken-3">
     <div class="container">
-      <ul class="right">
-        <li><a class="waves-effect light" href="/about">О нас</a></li>
-        <li><a class="waves-effect light" href="/lib">Моя библиотека</a></li>
-        <li>
-          <a class="waves-effect light" href="/accounts/login">
-            <!-- Dropdown Trigger -->
-            <a class='dropdown-trigger btn blue-grey darken-3 waves-effect waves-light z-depth-0' href='#' data-target='dropdown1'><i class="large material-icons">account_circle</i></a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-              <li><a href="/lib" class="green-text waves-effect waves-light">Мои книги</a></li>
-              <li><a href="#укажите в коде ссылку" class="green-text waves-effect waves-light">Настройки</a></li>
-            </ul>
-          </a>
-        </li>
+      <i class='right material-icons dropdown-trigger unselectable' data-target='dropdown1'>menu</i>
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="/lib" class="white-text waves-effect waves-light blue-grey darken-3">Мои книги</a></li>
+        <li><a href="/account" class="white-text waves-effect waves-light blue-grey darken-3">Настройки аккаунта</a></li>
+        <li><a class="white-text waves-effect waves-light blue-grey darken-3" href="/about">О нас</a></li>
+        <li><a class="white-text waves-effect waves-light blue-grey darken-3">Выйти</a></li>
       </ul>
-      <a href="/" class="brand-logo left">BookSharing</a>
+
+      <a href="/" class="brand-logo left unselectable">BookSharing</a>
     </div>
   </div>
 </nav>
@@ -36,9 +30,9 @@
         <span class="white-text email">5 уровень 100xp</span> <!-- email так надо, чтоб всё работало-->
       </div>
     </li>
-    <li><a class="waves-effect light" href="/">Книги</a></li>
-    <li><a class="waves-effect light" href="/lib">Моя библиотека</a></li>
-    <li><a class="waves-effect light" href="/account">Настройки аккаунта</a></li>
-    <li><a class="waves-effect light" href="/about">О нас</a></li>
+    <li><a class="waves-effect waves-light" href="/">Книги</a></li>
+    <li><a class="waves-effect waves-light" href="/lib">Моя библиотека</a></li>
+    <li><a class="waves-effect waves-light" href="/account">Настройки аккаунта</a></li>
+    <li><a class="waves-effect waves-light" href="/about">О нас</a></li>
 </ul>
 </header>
