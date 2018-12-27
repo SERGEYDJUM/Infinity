@@ -5,9 +5,9 @@ html
   font-family: Roboto;
 }
 
-::-webkit-scrollbar 
-{ 
-  display: none; 
+::-webkit-scrollbar
+{
+  display: none;
 }
 
 button[type=submit]
@@ -16,5 +16,6 @@ button[type=submit]
 }
 .modal
 {
-  border-radius: 20px
+  border-radius: 20px;
+  max-width: 60vh;  /*  Визуально modal не будет вытянутым вширь, т.к. его длина не сильно превышает высоту экрана  */
 }
