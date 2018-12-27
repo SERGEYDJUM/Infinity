@@ -9,50 +9,37 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Вход</title>
     </head>
-
-
     <body>
-    <div class="container">
-      <div class="row">
-        <div id="card" class="card col s10 offset-s1 m8 offset-m2 l6 offset-l3 xl6 offset-xl3">
 
-          <!-- Вход -->
-          <div class="row">
+      <div class="container">
+        <div class="row">
+          <div id="card" class="card-panel col s10 offset-s1 m8 offset-m2 l6 offset-l3 xl6 offset-xl3">
             <h3 class="center-align">Вход</h3>
-          </div>
-
-          <form method="post" action="{% url 'login' %}">
-              {% csrf_token %}
-              <!-- Логин -->
+            <form method="post" action="{% url 'login' %}">
               <div class="row">
-              <div class="input-field col s10 offset-s1">
-              <i class="material-icons prefix green-text">account_circle</i>
+                {% csrf_token %}
+                <div class="input-field col s10 offset-s1">
+                  <i class="material-icons prefix green-text">account_circle</i>
                   <input type="text" name="username" autofocus required id="id_username">
-                <label for="login" class="grey-text">Логин</label>
-              </div>
-              <div class="input-field col s10 offset-s1">
-                <i style="" class="material-icons prefix green-text">lock</i>
-              <input type="password" name="password" required id="id_password" >
-                <label for="password" class="grey-text">Пароль</label>
-              </div>
-              </div>
-
-              <!-- Кнопки -->
-              <div class="row">
+                  <label for="login" class="grey-text">Логин</label>
+                </div>
+                <div class="input-field col s10 offset-s1">
+                  <i style="" class="material-icons prefix green-text">lock</i>
+                  <input type="password" name="password" required id="id_password" >
+                  <label for="password" class="grey-text">Пароль</label>
+                </div>
                 <div class=" row col s6">
                   <button type="submit" value="login" class="green waves-effect waves-light btn col s8 offset-s2" value="{{ next }}">Войти</button>
                 </div>
-
                 <div class="row col s6">
                   <a href="/signin" class="green waves-effect waves-light btn col s8 offset-s2">Регистрация</a>
                 </div>
               </div>
             </form>
           </div>
-          </div>
         </div>
       </div>
-    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>

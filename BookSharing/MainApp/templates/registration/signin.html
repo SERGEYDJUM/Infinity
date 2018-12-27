@@ -1,83 +1,73 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      {% load static %}
-      <link rel="stylesheet" href="{% static 'css/signin.css' %}">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Регистрация</title>
-    </head>
-    <body>
-    <div class="container">
-      <div class="row">
-        <div id="card" class="card col s10 offset-s1 m8 offset-m2 l6 offset-l3 xl6 offset-xl3">
+<html>
 
-          <!-- Регистрация -->
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/signin.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Регистрация</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div id="card" class="card col s10 offset-s1 m8 offset-m2 l6 offset-l3 xl6 offset-xl3">
+        <h3 class="center-align">Регистрация</h3>
+        <form method="post" action="{% url 'signin' %}">
           <div class="row">
-            <h3 class="center-align">Регистрация</h3>
-          </div>
+            {% csrf_token %}
+            {% if for.errors %}
+            <p>Error</p>
+            {% endif %}
 
-          <div class="row">
-            <form method="post" action="{% url 'signin' %}">
-                {% csrf_token %}
-                {% if for.errors %}
-                <p>Error</p>
-                {% endif %}
-
-              <!-- Логин -->
-              <div class="input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">account_circle</i>
-                <input type="text" name="username" maxlength="150" autofocus required id="id_username">
-                <label for="login" class="grey-text">Логин</label>
-              </div>
-
-              <!-- Почта -->
-              <div class="row1 input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">contact_mail</i>
-                  <input type="email" name="email" required id="id_email">
-                <label for="email" class="grey-text">Почта</label>
-              </div>
-
-              <div class="row2 input-field col s10 offset-s1">
+            <div class="input-field col s10 offset-s1">
+              <i class="material-icons prefix green-text">account_circle</i>
+              <input type="text" name="username" maxlength="150">
+              <label for="login" class="grey-text">Логин</label>
+            </div>
+            <div class="row1 input-field col s10 offset-s1">
+              <i class="material-icons prefix green-text">mail</i>
+              <input type="email" name="email" required id="id_email">
+              <label for="email" class="grey-text">Почта</label>
+            </div>
+            <div class="row2 input-field col s10 offset-s1 m4 offset-m1">
               <i class="material-icons prefix green-text">person</i>
               <input type="text" name="first_name" maxlength="100" required id="id_first_name">
               <label for="first_name" class="grey-text">Имя</label>
-              </div>
-
-              <div class="row3 input-field col s10 offset-s1">
-              	<i class="material-icons prefix green-text">person</i>
-                <input type="text" name="last_name" maxlength="100" required id="id_last_name">
-                <label for="last_name" class="grey-text">Фамилия</label>
-              </div>
-              <!-- Пароль -->
-              <div class="row4 input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">lock</i>
+            </div>
+            <div class="row3 input-field col s10 offset-s1 m6 offset-m0">
+              <i class="hide-on-med-and-up material-icons prefix green-text">person</i>
+              <input type="text" name="last_name" maxlength="100" required id="id_last_name">
+              <label for="last_name" class="grey-text">Фамилия</label>
+            </div>
+            <div class="row4 input-field col s10 offset-s1">
+              <i class="material-icons prefix green-text">lock</i>
               <input type="password" name="password1" required id="id_password1">
-                <label for="password" class="grey-text">Пароль</label>
-                <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
+              <label for="password" class="grey-text">Пароль</label>
+              <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
+            </div>
+            <div class="row5 input-field col s10 offset-s1">
+              <i class="material-icons prefix green-text">repeat</i>
+              <input type="password" name="password2" required id="id_password2">
+              <label for="password" class="grey-text">Повторите пароль</label>
+              <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
+            </div>
+            <div class="row6">
+              <div class=" row col1 s6">
+                <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Зарегистрироваться</button>
               </div>
-              
-              <div class="row5 input-field col s10 offset-s1">
-                <i class="material-icons prefix green-text">repeat</i>
-                <input type="password" name="password2" required id="id_password2">
-                <label for="password" class="grey-text">Повторите пароль</label>
-                <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
-              </div>
-
-              <!-- Зарегистрироваться -->
-              <div class="row6">
-                <div class=" row col1 s6">
-                  <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Зарегистрироваться</button>
-                </div>
-              </div>
-
-            </form>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
 </html>
