@@ -19,8 +19,25 @@ button[type=submit]
 {
   border-radius: 20px;
 }
+
 .modal
 {
   border-radius: 20px;
   max-width: 60vh;  /*  Визуально modal не будет вытянутым вширь, т.к. его длина не сильно превышает высоту экрана  */
+}
+
+.card 
+{
+  border-radius: 15px;
+}
+
+.card-image 
+{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.btn
+{
+  border-radius: 20px;
 }
