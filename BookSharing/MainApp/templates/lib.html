@@ -89,28 +89,27 @@
 	<div id="modal1" class="modal">
 		<div class="modal-content">
 			<h4>Добавьте книгу</h4>
-			<form method="POST">
+			<form method="POST" enctype="multipart/form-data">
 				{% csrf_token %}
-				<input type="hidden" name="csrfmiddlewaretoken" value="zqEKTF560uVA4hP9TP8hwR1cSXjDX2Z9yCTWjIFsgSDty86ddiJZt0yqfSQbQxlE">
-				<input type="hidden" name="form-TOTAL_FORMS" value="1" id="id_form-TOTAL_FORMS">
-				<input type="hidden" name="form-INITIAL_FORMS" value="0" id="id_form-INITIAL_FORMS">
-				<input type="hidden" name="form-MIN_NUM_FORMS" value="0" id="id_form-MIN_NUM_FORMS">
-				<input type="hidden" name="form-MAX_NUM_FORMS" value="1000" id="id_form-MAX_NUM_FORMS">
+
+				<input type="hidden" name="csrfmiddlewaretoken" value="RK2gzlgmAb8fFU2cQi5cgVy9oUk43uCaNQMHVoZnbkaLBJ23IobeNxO2QoFwWYJT">
 				<div class="row">
 					<div class="input-field col s10 offset-s1">
+						<i class="material-icons prefix green-text">attach_file</i>
+					<label for="id_image"></label>
+					<input type="file" name="image" id="id_image">
+				  </div>
+					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix green-text">book</i>
-						<label class="grey-text" for="id_form-0-book">Название</label>
-						<input type="text" name="form-0-book" maxlength="20" id="id_form-0-book">
+						<label for="id_book">Название:</label> <input type="text" name="book" maxlength="20" required id="id_book">
 					</div>
 					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix green-text">account_circle</i>
-						<label for="id_form-0-dis">Автор</label>
-						<input type="text" name="form-0-dis" maxlength="120" id="id_form-0-dis">
+						<label for="id_dis">Автор:</label> <input type="text" name="dis" maxlength="120" required id="id_dis">
 					</div>
 					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix green-text">phone</i>
-						<label for="id_form-0-cont">Контакты</label>
-						<input type="text" name="form-0-cont" maxlength="30" id="id_form-0-cont">
+						<label for="id_cont">Контакты:</label> <input type="text" name="cont" maxlength="30" required id="id_cont">
 						<input type="hidden" name="form-0-id" id="id_form-0-id">
 					</div>
 					<button class="green waves-effect waves-light btn col s8 offset-s2" type="submit">Добавить</button>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, Addbook
 from django.contrib import auth
 from django.http import HttpResponseRedirect
 from django.forms import modelformset_factory
@@ -30,12 +30,11 @@ def about(reqest):
 
 @csrf_exempt
 def lib(reqest):
-    BooksFormSet = modelformset_factory(Books, fields=('book','dis','cont'))
-    if reqest.method == 'POST':
-        form = BooksFormSet(reqest.POST)
-        instances = form.save()
-        return redirect('http://127.0.0.1:8000')
-    form = BooksFormSet()
+    form = Addbook(reqest.POST or None, reqest.FILES or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        return HttpResponseRedirect('/')
     return render(reqest,'lib.html',{'form' : form})
 
 def account(reqest):
