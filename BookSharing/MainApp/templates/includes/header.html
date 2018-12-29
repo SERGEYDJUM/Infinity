@@ -26,9 +26,9 @@
 <ul id="slide-out" class="sidenav">
     {% if user.is_authenticated %}
     <li>
-      <div class="user-view"></div>
+      <div class="user-view">
         <div class="background blue-grey darken-3"></div>
-        <span class="white-text name">{{user.username}}</span>
+        <a href="/account" class="white-text name">{{user.username}}</a>
       </div>
     </li>
     <li><a class="waves-effect waves-light" href="/lib">Моя библиотека</a></li>
