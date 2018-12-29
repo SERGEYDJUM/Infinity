@@ -12,9 +12,9 @@
 
 <body>
 	{% include 'includes/header.html' %}
-
 	<div class="container main-container">
-		<div class="row">
+	<div class="row">
+	{% for i in book %}
 
 			<div class="col m4 l3">
 				<div class="card medium">
@@ -22,103 +22,18 @@
 						<img class="activator" src="//cdn.eksmo.ru/v2/ITD000000000834844/COVER/cover1__w600.jpg" alt="">
 					</div>
 					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">Загадки Цивилизаций<i class="material-icons right">more_vert</i></span>
-						<p>Игорь Прокопнко</p>
+						<span class="card-title activator grey-text text-darken-4">{{ i.book }}<i class="material-icons right">more_vert</i></span>
+						<p>{{ i.dis }}</p>
 					</div>
 					<div class="card-reveal">
 						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
-						<p>+76661337666 Whatsapp</p>
+						<p>{{ i.cont }}</p>
 						<a class="green waves-effect waves-light btn">Написать</a>
 					</div>
 				</div>
 			</div>
-
-			<div class="col m4 l3">
-				<div class="card medium">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="https://upload.wikimedia.org/wikipedia/ru/thumb/b/bd/%D0%90%D1%80%D1%85%D0%B8%D0%BF%D0%B5%D0%BB%D0%B0%D0%B3_%D0%93%D0%A3%D0%9B%D0%90%D0%93021.jpg/200px-%D0%90%D1%80%D1%85%D0%B8%D0%BF%D0%B5%D0%BB%D0%B0%D0%B3_%D0%93%D0%A3%D0%9B%D0%90%D0%93021.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">Архипелаг Гулаг<i class="material-icons right">more_vert</i></span>
-						<p>А. Солженицын</p>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
-						<p>+76661337666 Whatsapp</p>
-						<a class="green waves-effect waves-light btn">Написать</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col m4 l3">
-				<div class="card medium">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="https://lavnik.net/wp-content/uploads/2017/03/o-o-e1489090416858-860x1374.jpeg" alt="">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">1984<i class="material-icons right">more_vert</i></span>
-						<p>Джордж Оруелл</p>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
-						<p>+76661337666 Whatsapp</p>
-						<a class="green waves-effect waves-light btn">Написать</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col m4 l3">
-				<div class="card medium">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="https://ozon-st.cdn.ngenix.net/multimedia/1001704616.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">О дивный новый мир<i class="material-icons right">more_vert</i></span>
-						<p>Олдос Хаксли</p>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
-						<p>+76661337666 Whatsapp</p>
-						<a class="green waves-effect waves-light btn">Написать</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col m4 l3">
-				<div class="card medium">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="https://www.moscowbooks.ru/image/book/181/w600/i181541.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">Общество потребления<i class="material-icons right">more_vert</i></span>
-						<p>Ж. Бодрийяр</p>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
-						<p>+76661337666 Whatsapp</p>
-						<a class="green waves-effect waves-light btn">Написать</a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col m4 l3">
-				<div class="card medium">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="https://kommynist.ru/images/thumb/a/aa/%D0%9A%D0%90%D0%9F%D0%98%D0%A2%D0%90%D0%9B.jpg/300px-%D0%9A%D0%90%D0%9F%D0%98%D0%A2%D0%90%D0%9B.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">Капитал<i class="material-icons right">more_vert</i></span>
-						<p>К. Маркс</p>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
-						<p>+76661337666 Whatsapp</p>
-						<a class="green waves-effect waves-light btn">Написать</a>
-					</div>
-				</div>
-			</div>
-
-		</div>
+			{% endfor %}
+	</div>
 	</div>
 
 	<!-- //cdn.eksmo.ru/v2/ITD000000000834844/COVER/cover1__w600.jpg -->

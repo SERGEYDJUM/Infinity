@@ -10,7 +10,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def index(reqest):
-    return render(reqest,'index.html')
+    book = Books.objects.all()
+    return render(reqest, 'index.html', {'book' : book})
 
 def signin(reqest):
     if reqest.method == 'POST':
