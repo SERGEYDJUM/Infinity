@@ -86,31 +86,37 @@
 
 
 	<button class="fixed-action-btn btn-floating btn-large green modal-trigger" data-target="modal1"><i class="material-icons">add</i></button>
-	<div id="modal1" class="modal">
+	<div id="modal1" class="modal unselectable">
 		<div class="modal-content">
-			<h4>Добавьте книгу</h4>
+			<h5 class="center">Добавьте книгу</h5>
 			<form method="POST" enctype="multipart/form-data">
 				{% csrf_token %}
 
 				<input type="hidden" name="csrfmiddlewaretoken" value="RK2gzlgmAb8fFU2cQi5cgVy9oUk43uCaNQMHVoZnbkaLBJ23IobeNxO2QoFwWYJT">
 				<div class="row">
 					<div class="input-field col s10 offset-s1">
-						<i class="material-icons prefix green-text">attach_file</i>
-					<label for="id_image"></label>
-					<input type="file" name="image" id="id_image">
-				  </div>
-					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix green-text">book</i>
-						<label for="id_book">Название:</label> <input type="text" name="book" maxlength="20" required id="id_book">
+						<label for="id_book">Название</label> 
+						<input type="text" name="book" maxlength="20" required id="id_book">
 					</div>
 					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix green-text">account_circle</i>
-						<label for="id_dis">Автор:</label> <input type="text" name="dis" maxlength="120" required id="id_dis">
+						<label for="id_dis">Автор</label> 
+						<input type="text" name="dis" maxlength="120" required id="id_dis">
 					</div>
 					<div class="input-field col s10 offset-s1">
 						<i class="material-icons prefix green-text">phone</i>
-						<label for="id_cont">Контакты:</label> <input type="text" name="cont" maxlength="30" required id="id_cont">
+						<label for="id_cont">Контакты</label> 
+						<input type="text" name="cont" maxlength="30" required id="id_cont">
 						<input type="hidden" name="form-0-id" id="id_form-0-id">
+					</div>
+					<div class="file-field input-field col s10 offset-s1">
+							<i class="material-icons prefix green-text">photo</i>
+							<input type="file" name="image" required id="id_image">
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text">
+							</div>
+							<label for="id_image">Фото</label> 
 					</div>
 					<button class="green waves-effect waves-light btn col s8 offset-s2" type="submit">Добавить</button>
 				</div>
