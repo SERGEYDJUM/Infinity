@@ -26,12 +26,12 @@ button[type=submit]
   max-width: 60vh;  /*  Визуально modal не будет вытянутым вширь, т.к. его длина не сильно превышает высоту экрана  */
 }
 
-.card 
+.card
 {
   border-radius: 15px;
 }
 
-.card-image 
+.card-image
 {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
