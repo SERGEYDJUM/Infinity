@@ -68,7 +68,34 @@
     </div>
   </div>
 
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#successful">successful</a>
+  <a class="waves-effect waves-light btn modal-trigger" href="#fail">fail</a>
+
+  <!-- Modal Structure -->
+  <div id="successful" class="modal">
+    <div class="modal-content">
+      <h4>Поздравляем!</h4>
+      <p>Вы успешно прошли регистрацию. Теперь вы можете войти и начать пользоваться сайтом.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ок</a>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="fail" class="modal">
+    <div class="modal-content">
+      <h4>Упс!</h4>
+      <p>Кажется, вы что-то ввели не так. Попробуйте ещё раз.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ок</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{% static 'js/common.js' %}"></script>
 </body>
 
 </html>
