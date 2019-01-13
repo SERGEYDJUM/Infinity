@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
 <head>
+	{% if not user.is_authenticated %}
+	<meta http-equiv="refresh" content="0;URL=/"/>
+	{% endif %}
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	{% load static %}
@@ -12,74 +15,49 @@
 </head>
 
 <body>
+	{% if user.is_authenticated %}
 	{% include 'includes/header.html' %}
-
-	<div class="container main-container">
-		<div class="row">
-			<div class="col m4 l3">
-				<div class="card medium">
-					<div class="card-image waves-effect waves-block waves-light">
-						<img class="activator" src="https://ozon-st.cdn.ngenix.net/multimedia/1001704616.jpg" alt="">
-					</div>
-					<div class="card-content">
-						<span class="card-title activator grey-text text-darken-4">О дивный новый мир<i class="material-icons right">more_vert</i></span>
-						<p>Олдос Хаксли</p>
-					</div>
-					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">expand_less</i></span>
-						<p>+76661337666 Whatsapp</p>
-						<a class="btn-flat right"><i class="material-icons">create</i></a>
-						<a class="btn-flat right"><i class="material-icons">delete</i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
 	<button class="fixed-action-btn btn-floating btn-large green modal-trigger" data-target="modal1"><i class="material-icons">add</i></button>
 	<div id="modal1" class="modal unselectable">
-		<div class="modal-content">
-			<h5 class="center">Добавьте книгу</h5>
-			<form method="POST" enctype="multipart/form-data">
-				{% csrf_token %}
-
-				<input type="hidden" name="csrfmiddlewaretoken" value="RK2gzlgmAb8fFU2cQi5cgVy9oUk43uCaNQMHVoZnbkaLBJ23IobeNxO2QoFwWYJT">
-				<div class="row">
-					<div class="input-field col s10 offset-s1">
-						<i class="material-icons prefix green-text">book</i>
-						<label for="id_book">Название</label>
-						<input type="text" name="book" maxlength="20" required id="id_book">
-					</div>
-					<div class="input-field col s10 offset-s1">
-						<i class="material-icons prefix green-text">account_circle</i>
-						<label for="id_dis">Автор</label>
-						<input type="text" name="dis" maxlength="120" required id="id_dis">
-					</div>
-					<div class="input-field col s10 offset-s1">
-						<i class="material-icons prefix green-text">phone</i>
-						<label for="id_cont">Контакты</label>
-						<input type="text" name="cont" maxlength="30" required id="id_cont">
-						<input type="hidden" name="form-0-id" id="id_form-0-id">
-					</div>
-					<div class="file-field input-field col s10 offset-s1">
-						<i class="material-icons prefix green-text">photo</i>
-						<input type="file" name="image" required id="id_image">
-						<div class="file-path-wrapper">
-							<input class="file-path validate" type="text">
+			<div class="modal-content">
+				<h5 class="center">Добавьте книгу</h5>
+				<form method="POST" enctype="multipart/form-data">
+					{% csrf_token %}
+	
+					<input type="hidden" name="csrfmiddlewaretoken" value="RK2gzlgmAb8fFU2cQi5cgVy9oUk43uCaNQMHVoZnbkaLBJ23IobeNxO2QoFwWYJT">
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+							<i class="material-icons prefix green-text">book</i>
+							<label for="id_book">Название</label>
+							<input type="text" name="book" maxlength="20" required id="id_book">
 						</div>
-						<label for="id_image">Фото</label>
+						<div class="input-field col s10 offset-s1">
+							<i class="material-icons prefix green-text">account_circle</i>
+							<label for="id_dis">Автор</label>
+							<input type="text" name="dis" maxlength="120" required id="id_dis">
+						</div>
+						<div class="input-field col s10 offset-s1">
+							<i class="material-icons prefix green-text">phone</i>
+							<label for="id_cont">Контакты</label>
+							<input type="text" name="cont" maxlength="30" required id="id_cont">
+							<input type="hidden" name="form-0-id" id="id_form-0-id">
+						</div>
+						<div class="file-field input-field col s10 offset-s1">
+							<i class="material-icons prefix green-text">photo</i>
+							<input type="file" name="image" id="id_image">
+							<div class="file-path-wrapper">
+								<input class="file-path validate" type="text">
+							</div>
+							<label for="id_image">Фото</label>
+						</div>
+						<button class="green waves-effect waves-light btn col s8 offset-s2" type="submit">Добавить</button>
 					</div>
-					<button class="green waves-effect waves-light btn col s8 offset-s2" type="submit">Добавить</button>
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
-	</div>
-
-
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="{% static 'js/common.js' %}"></script>
+	{% endif %}
 </body>
-
 </html>

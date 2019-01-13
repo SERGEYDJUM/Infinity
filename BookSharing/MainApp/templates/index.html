@@ -24,7 +24,7 @@
 						{% if i.image.url != Null %}
 						<img class="activator" src="{{i.image.url}}">
 						{% else %}
-						<img class="activator" src="http://instcomputer.ru/wp-content/themes/maininst/images/no-photo.jpg">
+						<img class="activator" src="{% static 'images/no-photo.png' %}">
 						{% endif %}
 					</div>
 					<div class="card-content">
