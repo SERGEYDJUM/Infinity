@@ -1,43 +1,47 @@
-<header>
+<header class="unselectable">
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}"></link>
 <div class="navbar-fixed hide-on-small-only">
 <nav>
   <div class="navbar-fixed nav-wrapper blue-grey darken-3">
     <div class="container">
-      <i class="right material-icons dropdown-trigger unselectable" data-target="dropdown1">menu</i>
+      <i class="right material-icons dropdown-trigger" data-target="dropdown1">menu</i>
       <!-- Dropdown Structure -->
       <ul id='dropdown1' class='dropdown-content'>
         {% if user.is_authenticated %}
-        <li><a href="/lib" class="white-text waves-effect waves-light blue-grey darken-3">Мои книги</a></li>
-        <li><a href="/account" class="white-text waves-effect waves-light blue-grey darken-3">Настройки аккаунта</a></li>
-        <li><a class="white-text waves-effect waves-light blue-grey darken-3" href='/logout' >Выйти</a></li>
+        <li><a href="/lib" class="white-text waves-effect blue-grey darken-3">Мои книги</a></li>
+        <li><a href="/account" class="white-text waves-effect blue-grey darken-3">Настройки аккаунта</a></li>
+        <li><a class="white-text waves-effect blue-grey darken-3" href='/logout' >Выйти</a></li>
         {% else %}
-		    <li><a class="white-text waves-effect waves-light blue-grey darken-3" href='/accounts/login'>Войти</a></li>
+		    <li><a class="white-text waves-effect blue-grey darken-3" href='/accounts/login'>Войти</a></li>
         {% endif %}
-        <li><a class="white-text waves-effect waves-light blue-grey darken-3" href="/about">О нас</a></li>
+        <li><a class="white-text waves-effect blue-grey darken-3" href="/about">О нас</a></li>
       </ul>
-      <a href="/" class="brand-logo left unselectable">BookSharing</a>
+      <a href="/" class="brand-logo left">BookSharing</a>
     </div>
   </div>
 </nav>
 </div>
-
-<ul id="slide-out" class="sidenav">
-    {% if user.is_authenticated %}
-    <li>
-      <div class="user-view">
-        <div class="background blue-grey darken-3"></div>
-        <a href="/account" class="white-text name">{{user.username}}</a>
-      </div>
-    </li>
-    <li><a class="waves-effect waves-light" href="/lib">Моя библиотека</a></li>
-    <li><a class="waves-effect waves-light" href="/account">Настройки аккаунта</a></li>
-    <li><a class="waves-effect waves-light" href="/logout">Выйти</a></li>
-    {% else %}
-    <li><a class="waves-effect waves-light" href="/accounts/login">Войти</a></li>
-    <li><a class="waves-effect waves-light" href="/">Книги</a></li>
-    <li><a class="waves-effect waves-light" href="/about">О нас</a></li>
-    {% endif %}
-</ul>
 </header>
+
+<ul id="slide-out" class="sidenav unselectable">
+  {% if user.is_authenticated %}
+  <li><div class="user-view">
+    <div class="background blue-grey darken-3"></div>
+    <!-- Тут фото-затычка-->
+    <a href="/account"><img class="circle" src="{% static 'images/illuminatipizza.jpg' %}"></a>
+    <a href="/account"><span class="white-text name">{{user.last_name}}, {{user.first_name}}</span></a>
+    <a href="/account"><span class="white-text email">{{user.username}}</span></a>
+  </div></li>
+  <li><a class="waves-effect" href="/lib">Моя библиотека</a></li>
+  <li><a class="waves-effect" href="/account">Настройки аккаунта</a></li>
+  <li><a class="waves-effect" href="/about">О нас</a></li>
+  <li><a class="waves-effect" href="/logout">Выйти</a></li>
+  {% else %}
+  <li><a class="waves-effect" href="/accounts/login">Войти</a></li>
+  <li><a class="waves-effect" href="/">Книги</a></li>
+  <li><a class="waves-effect" href="/about">О нас</a></li>
+  {% endif %}
+</ul>
+
+
