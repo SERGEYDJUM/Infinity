@@ -20,7 +20,7 @@ def signin(reqest):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(reqest, f'hi{username}')
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/login')
     else:
         form = UserRegisterForm()
     return render(reqest,'registration/signin.html', {'form': form})

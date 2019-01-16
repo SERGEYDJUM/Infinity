@@ -24,7 +24,7 @@
 						{% if i.image.url != Null %}
 						<img class="activator" src="{{i.image.url}}">
 						{% else %}
-						<img class="activator" src="http://instcomputer.ru/wp-content/themes/maininst/images/no-photo.jpg">
+						<img class="activator" src="{% static 'images/no-photo.png' %}">
 						{% endif %}
 					</div>
 					<div class="card-content">
@@ -32,9 +32,8 @@
 						<p>{{ i.dis }}</p>
 					</div>
 					<div class="card-reveal">
-						<span class="card-title grey-text text-darken-4">Контакты<i class="material-icons right">close</i></span>
+						<span class="card-title grey-text text-darken-4">Описание<i class="material-icons right">close</i></span>
 						<p>{{ i.cont }}</p>
-						<a class="green waves-effect waves-light btn">Написать</a>
 					</div>
 				</div>
 			</div>
