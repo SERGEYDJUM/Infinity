@@ -1,0 +1,48 @@
+/* Mobile */
+#maincontainer {
+  height: 100vh;
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+  #maincontainer {
+    height: 92vh;
+  }
+}
+
+.hat-field
+{
+  height: 5%;
+}
+
+.message-field
+{
+  height: 85%;
+  overflow: scroll;
+}
+
+.action-field
+{
+  height: 10%;
+}
+
+.message
+{
+  margin: 0px 15px 0px 15px;
+  padding: 10px 10px 10px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  border-radius: 10px;
+  max-width: 60%;
+}
+
+/* .col.s4
+{
+  height: 10vh;
+} */
+
+.send-button
+{
+  width: 50px;
+  height: 50px;
+}

@@ -27,6 +27,8 @@ def signin(reqest):
 
 def about(reqest):
     return render(reqest,'about.html')
+def chat(reqest):
+    return render(reqest,'chat.html')
 
 @csrf_exempt
 def lib(reqest):
