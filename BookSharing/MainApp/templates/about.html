@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 	<head>
+		{% include 'includes/header.html' %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{% load static %}
 		<link rel="stylesheet" href="{% static 'css/about.css' %}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>О нас</title>
+		<link rel="shortcut icon" type="image/png"
 		<style type="text/css">
 		div.header {
 			height: 500px
@@ -43,7 +46,6 @@
 		</style>
 	</head>
 	<body>
-	{% include 'includes/header.html' %}
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="{% static 'js/common.js' %}"></script>
