@@ -29,6 +29,8 @@ def about(reqest):
     return render(reqest,'about.html')
 def chat(reqest):
     return render(reqest,'chat.html')
+def login(reqest):
+    return render(reqest,'registration/login.html')
 
 @csrf_exempt
 def lib(reqest):
