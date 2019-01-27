@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Регистрация</title>
-  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}" />
 </head>
 
 <body>
@@ -25,49 +25,49 @@
             <p>Error</p>
             {% endif %}
 
+
+
             <div class="input-field col s10 offset-s1">
               <i class="material-icons prefix green-text">account_circle</i>
-              <input type="text" name="username" maxlength="150">
-              <label for="login" class="grey-text">Логин</label>
+              <input id="login" type="text" name="username" maxlength="150" autofocus>
+              <label for="login" class="grey-text unselectable">Логин</label>
             </div>
-            <div class="row1 input-field col s10 offset-s1">
+            <div class="input-field col s10 offset-s1">
               <i class="material-icons prefix green-text">mail</i>
-              <input type="email" name="email" required id="id_email">
+              <input id="email" type="email" name="email" required>
               <label for="email" class="grey-text">Почта</label>
             </div>
-            <div class="row2 input-field col s10 offset-s1 m4 offset-m1">
+            <div class="input-field col s10 offset-s1 m4 offset-m1">
               <i class="material-icons prefix green-text">person</i>
-              <input type="text" name="first_name" maxlength="100" required id="id_first_name">
+              <input id="first_name" type="text" name="first_name" maxlength="100" required>
               <label for="first_name" class="grey-text">Имя</label>
             </div>
-            <div class="row3 input-field col s10 offset-s1 m6 offset-m0">
-              <i class="hide-on-med-and-up material-icons prefix green-text">person</i>
-              <input type="text" name="last_name" maxlength="100" required id="id_last_name">
+
+            <div class="input-field col s10 offset-s1 m6 offset-m0">
+              <input id="last_name" type="text" name="last_name" maxlength="100" required>
               <label for="last_name" class="grey-text">Фамилия</label>
             </div>
-            <div class="row4 input-field col s10 offset-s1">
+            <div class="input-field col s10 offset-s1">
               <i class="material-icons prefix green-text">lock</i>
-              <input type="password" name="password1" required id="id_password1">
+              <input id="password" type="password" name="password1" required id="id_password1">
               <label for="password" class="grey-text">Пароль</label>
               <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
             </div>
-            <div class="row5 input-field col s10 offset-s1">
+            <div class=" input-field col s10 offset-s1">
               <i class="material-icons prefix green-text">repeat</i>
-              <input type="password" name="password2" required id="id_password2">
+              <input id="password_again" type="password" name="password2" required id="id_password2">
               <label for="password" class="grey-text">Повторите пароль</label>
               <div class="helper-text" data-error="Минимум строчная, прописная буква, цифра. Длина: 8-16."></div>
             </div>
-            <div class="row6">
               <div class=" row col1 s6">
                 <button type="submit" class="green waves-effect waves-light btn col s8 offset-s2">Зарегистрироваться</button>
               </div>
-            </div>
           </div>
         </form>
       </div>
     </div>
   </div>
- 
+
   <!-- Modal Trigger -->
   <!--<a class="waves-effect waves-light btn modal-trigger" href="#successful">successful</a>-->
   <!--<a class="waves-effect waves-light btn modal-trigger" href="#fail">fail</a>-->

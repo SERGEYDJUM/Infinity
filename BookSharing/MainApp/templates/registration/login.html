@@ -21,13 +21,13 @@
                 {% csrf_token %}
                 <div class="input-field col s10 offset-s1">
                   <i class="material-icons prefix green-text">account_circle</i>
-                  <input type="text" name="username" autofocus required id="id_username">
-                  <label for="login" class="grey-text">Логин</label>
+                  <input id="id_username" type="text" name="username" autofocus required>
+                  <label for="id_username" class="grey-text">Логин</label>
                 </div>
                 <div class="input-field col s10 offset-s1">
                   <i style="" class="material-icons prefix green-text">lock</i>
-                  <input type="password" name="password" required id="id_password" >
-                  <label for="password" class="grey-text">Пароль</label>
+                  <input id="id_password" type="password" name="password" required >
+                  <label for="id_password" class="grey-text">Пароль</label>
                 </div>
                 <div class=" row col s6">
                   <button type="submit" value="login" class="green waves-effect waves-light btn col s8 offset-s2" value="{{ next }}">Войти</button>
