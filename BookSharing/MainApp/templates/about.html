@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 	<head>
+		{% include 'includes/header.html' %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		{% load static %}
@@ -7,12 +8,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>О нас</title>
-		<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+		<link rel="shortcut icon" type="image/png"
+		<style type="text/css">
+		div.header {
+			height: 500px
+			width: 300px; /* Ширина слоя 
+			padding: 10px; /* Поля вокруг текста */
+			background: white; /* Цвет фона */
+			font-family: Roboto;
+			margin-top: -5vh;
+			border: 1px solid #4caf50;
+			box-shadow: 0 0 5px;
+			}
+		
+		.btn-primary {
+			background-color: #4caf50;
+			color: white;
+			margin-left: 10px;
+			font-family: Roboto;
+
+		}
+			
+		.block {
+			width: 800px;
+			height: 600px;
+			position: absolute;
+			top: 50%;
+			left: 30%;
+			margin: -125px 0 0 -125px;
+			background-color: white;
+			border: 3px solid #4caf50;
+			box-shadow: 0 0 10px;
+			font-family: Roboto;
+		}
+
+			
+		</style>
 	</head>
 	<body>
 		{% include 'includes/header.html' %}
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="{% static 'js/common.js' %}"></script>
+		<BODY bgcolor="white" text="black">
+		<div class = 'wrapper'>
+		<div class = 'header'><h1 align="center" style="font-family: 'Montserrat', sans-serif;">О нас</h1></div>
+		
+		<div class="block"> <h4 align = center>Другая инфа</div>
 	</body>
 </html>
+
+
+
+
+
